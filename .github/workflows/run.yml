@@ -30,7 +30,7 @@ jobs:
         run: |
           # Inputs for: length, lowercase, UPPERCASE, digits, symbols, avoid look-alikes, how many
           # Change these to whatever you want.
-          printf "16\ny\ny\ny\ny\ny\n3\n" > input.txt
+          printf "20\ny\ny\ny\nn\ny\n5\n" > input.txt
 
           # Run and save output
           java -cp out com.umair.passwordgen.App < input.txt | tee run-output.txt
