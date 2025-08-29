@@ -11,6 +11,10 @@ A simple, CLI-based password generator with selectable options (length, lowercas
 - Strength estimate (Very Weak → Excellent) using entropy approximation
 
 ## Quick Start
+### Run with one command
+```bash
+./run.sh
+
 
 ### Compile
 javac -d out $(find src -name "*.java")
