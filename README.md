@@ -1,3 +1,4 @@
+[![Build and Run Password Generator](https://github.com/umairirfan19/password-generator/actions/workflows/run.yml/badge.svg)](https://github.com/umairirfan19/password-generator/actions/workflows/run.yml)
 # Password Generator (Java)
 
 A simple, CLI-based password generator with selectable options (length, lowercase, uppercase, digits, symbols) and a basic entropy-based strength estimate.
