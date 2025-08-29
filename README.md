@@ -25,7 +25,6 @@ Entropy ≈ `length * log2(poolSize)`. Labels:
 - < 80: Strong
 - ≥ 80: Excellent
 
-> Note: Entropy is a rough guide. For critical security, use a password manager.
 
 ## Project Layout
 - App.java – CLI and prompts
