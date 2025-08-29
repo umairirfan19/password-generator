@@ -1,0 +1,42 @@
+name: Build and Run Password Generator
+
+on:
+  push:
+    paths:
+      - 'src/**'
+      - '.github/workflows/run.yml'
+  workflow_dispatch:
+
+jobs:
+  build-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Compile Java sources
+        run: |
+          mkdir -p out
+          javac -d out $(find src -name "*.java")
+
+      - name: Run app with sample inputs
+        run: |
+          # Inputs for: length, lowercase, UPPERCASE, digits, symbols, avoid look-alikes, how many
+          # Change these to whatever you want.
+          printf "16\ny\ny\ny\ny\ny\n3\n" > input.txt
+
+          # Run and save output
+          java -cp out com.umair.passwordgen.App < input.txt | tee run-output.txt
+
+      - name: Upload output as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: passwordgen-output
+          path: run-output.txt
