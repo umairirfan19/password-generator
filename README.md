@@ -18,6 +18,17 @@ javac -d out $(find src -name "*.java")
 ### Run
 java -cp out com.umair.passwordgen.App
 
+### Sample run
+
+```text
+=== Java Password Generator ===
+#1) nuXRVHe7e44zDa6prCkT   Strength: Excellent (Entropy≈112.9 bits)
+#2) GMyAa7KvDfacQggqKkbN   Strength: Excellent (Entropy≈112.9 bits)
+#3) RTYRQ6imuMw3HG7svUHH   Strength: Excellent (Entropy≈112.9 bits)
+#4) izuG4WJVfPNcju69LRFR   Strength: Excellent (Entropy≈112.9 bits)
+#5) LWJviCuLbENbiqztqbqe   Strength: Excellent (Entropy≈112.9 bits)
+
+
 ## How strength is estimated
 Entropy ≈ `length * log2(poolSize)`. Labels:
 - < 28: Very Weak
